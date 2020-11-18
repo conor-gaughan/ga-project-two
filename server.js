@@ -8,7 +8,8 @@ require('dotenv').config();
 
 const app = express();
 
-const indexRouter = require('./routes/index')
+const indexRouter = require('./routes/index');
+const todosRouter = require('./routes/todos');
 
 // require('./config/database');
 // require('./config/passport');
@@ -32,7 +33,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 */
 
-app.use('/', indexRouter)
+app.use('/', indexRouter);
+app.use('/', todosRouter);
 
 app.listen(port, function() {
     console.log(`Express listening on ${port}`)
