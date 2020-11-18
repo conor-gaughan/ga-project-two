@@ -11,7 +11,7 @@ const app = express();
 const indexRouter = require('./routes/index');
 const todosRouter = require('./routes/todos');
 
-// require('./config/database');
+require('./config/database');
 // require('./config/passport');
 
 app.set('view engine', 'ejs');
