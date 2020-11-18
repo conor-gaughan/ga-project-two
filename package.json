@@ -1,0 +1,32 @@
+{
+  "name": "ga-project-two",
+  "version": "1.0.0",
+  "description": "<h1>Todo App!</h1>",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express-session": "^1.17.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conor-gaughan/ga-project-two.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conor-gaughan/ga-project-two/issues"
+  },
+  "homepage": "https://github.com/conor-gaughan/ga-project-two#readme"
+}
