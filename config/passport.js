@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy({
                 googleId: profile.id,
             });
 
-            newUser.save(function(err) {
+            newUser.save(function(err, user) {
                 if(err) return cb(err);
                 return cb(null, user)
             })
@@ -30,7 +30,7 @@ passport.use(new GoogleStrategy({
 }))
 
 passport.serializeUser(function(user, done) {
-    done(null, user)
+    done(null, user.id)
 });
 
 passport.deserializeUser(function(id, done) {
