@@ -2,12 +2,19 @@
 
 <section>
 <form action="/todos" method="post">
-    <label for="title">Title</label>
+    <label for="title">Add Task</label>
     <input type="text" name="title" id="">
-    <label for="description">Description</label>
-    <input type="text" name="description" id="">
-    <label for="date">Date</label>
-    <input type="datetime-local" name="date" id="">
-    <button type="submit">Add Task</button>
+    <button type="submit">Enter Task</button>
 </form>
 </section>
+<section>
+<ul>
+<% todos.forEach(todo => { %>
+    <li><%= todo.title %></li>
+    <a href="/todos/<%= todo._id %>">Details</a>
+<% }) %>
+</ul>
+
+</section>
+<a href="/">back home</a>
+
