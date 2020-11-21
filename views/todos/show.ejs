@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="description">Description</label>
-    <input type="text" name="description" id="">
-    <label for="date">Date</label>
-    <input type="datetime-local" name="date" id="">
-    <button type="submit">Add Task</button>
+    <h2>Details</h2>
+    <ul>
+        <li><%=todo.title%></li>
+    </ul>
 </body>
+<a href="/todos/<%= todo._id %>/edit"><button>Edit</button></a>
+<a href="/todos">Back to todos</a>
+<a href="/">Back home</a>
 </html>

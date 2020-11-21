@@ -10,9 +10,20 @@
 <section>
 <ul>
 <% todos.forEach(todo => { %>
-    <li><%= todo.title %></li>
+    <li><%= todo.title %></li> <a href="/todos">
     <a href="/todos/<%= todo._id %>">Details</a>
 <% }) %>
+</ul>
+
+<ul>
+    <% todos.forEach(function(todo, id) { %>
+        <li>
+            <form class="delete-form" action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+                <a href="/todos/<%= todo._id %>"><button type="submit">X</button></a>
+            </form>
+
+        </li>
+    <% }) %>
 </ul>
 
 </section>

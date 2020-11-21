@@ -3,7 +3,10 @@ const Todo = require('../models/todo')
 module.exports = {
     index,
     create,
-    show
+    show,
+    delete: deleteTodo,
+    edit,
+    update,
 }
 
 
@@ -29,4 +32,27 @@ function show(req, res) {
     Todo.findById(req.params.id, function(err, todo) {
         res.render('todos/show', {title: 'Todo Detail', todo})
     })
+}
+
+function deleteTodo(req, res) {
+    Todo.deleteOne(req.params.id, function(err, todo) {
+        todo.splice(req.params.id, 1)
+        res.redirect('/todos');
+    });
+}
+
+function edit(req, res) {
+    Todo.findOne(req.params.id, function(err, todo) {
+        res.render('todos/edit', {
+            todo,
+            todos: req.params.id
+        })
+    })
+}
+
+
+function update(req, res) {
+    req.body.done = false;
+    Todo.updateOne(req.body, req.params.id);
+    res.redirect('/todos');
 }
