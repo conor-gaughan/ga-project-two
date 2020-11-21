@@ -45,17 +45,14 @@ function edit(req, res) {
     Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
         res.render('todos/edit', {
             todo,
-            todos: req.params.id
         })
     })
 }
 
 
 function update(req, res) {
-    // req.body.done = false;
-
-    Todo.updateOne(req.body, function(err, todos) {
-        todos.splice(req.params.id, 1)
+    Todo.findByIdAndUpdate(req.params.id, req.body, function(err, t0d0) {
+        console.log(err, todo)
+        res.redirect(`/todos/${todo._id}`);
     });
-    res.redirect('/todos');
 }

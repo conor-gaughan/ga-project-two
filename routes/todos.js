@@ -10,6 +10,7 @@ router.post('/', todosCtrl.create);
 router.get('/:id', todosCtrl.show);
 router.delete('/:id', todosCtrl.delete);
 router.get('/:id/edit', todosCtrl.edit);
+router.put('/:id', todosCtrl.update)
 
 
 

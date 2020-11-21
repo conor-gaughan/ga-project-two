@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const todos = require('../controllers/todos');
+
+
+
 
 const todoSchema = new mongoose.Schema({
     title: {
@@ -15,9 +17,6 @@ const todoSchema = new mongoose.Schema({
         type: Date,
     }
 }, { timestamps: true })
-
-
-
 
 
 module.exports = mongoose.model('Todo', todoSchema)
