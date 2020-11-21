@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+
 mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/todos', {
     useNewUrlParser: true, 
     useCreateIndex: true,
