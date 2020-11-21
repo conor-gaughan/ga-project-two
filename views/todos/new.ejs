@@ -16,11 +16,12 @@
 </ul>
 
 <ul>
-    <% todos.forEach(function(todo, id) { %>
+    <% todos.forEach(function(todo) { %>
         <li>
-            <form class="delete-form" action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
-                <a href="/todos/<%= todo._id %>"><button type="submit">X</button></a>
+            <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
             </form>
+            <a href="/todos/<%= todo._id %>"></a>
 
         </li>
     <% }) %>

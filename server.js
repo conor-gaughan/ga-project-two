@@ -1,7 +1,7 @@
 const express = require('express');
 const port = 3000;
 const morgan = require('morgan');
-const method_override = require('method-override');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 
@@ -21,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 // TODO Add session middleware here
 

@@ -35,14 +35,14 @@ function show(req, res) {
 }
 
 function deleteTodo(req, res) {
-    Todo.deleteOne(req.params.id, function(err, todo) {
-        todo.splice(req.params.id, 1)
+    Todo.findByIdAndDelete(req.params.id, function(err, todo) {
         res.redirect('/todos');
     });
 }
 
+
 function edit(req, res) {
-    Todo.findOne(req.params.id, function(err, todo) {
+    Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
         res.render('todos/edit', {
             todo,
             todos: req.params.id
@@ -52,7 +52,10 @@ function edit(req, res) {
 
 
 function update(req, res) {
-    req.body.done = false;
-    Todo.updateOne(req.body, req.params.id);
+    // req.body.done = false;
+
+    Todo.updateOne(req.body, function(err, todos) {
+        todos.splice(req.params.id, 1)
+    });
     res.redirect('/todos');
 }

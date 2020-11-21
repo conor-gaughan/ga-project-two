@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
-
-module.exports = {
-    getOne,
-    deleteOne,
-    updateOne
-}
+const todos = require('../controllers/todos');
 
 const todoSchema = new mongoose.Schema({
     title: {
@@ -21,16 +16,8 @@ const todoSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-function getOne(id) {
-    return todos[id];
-}
 
-function deleteOne(id) {
-    todos.splice(id, 1);
-}
 
-function updateOne(todo, id) {
-    todos.splice(id, 1, todo);
-}
+
 
 module.exports = mongoose.model('Todo', todoSchema)
