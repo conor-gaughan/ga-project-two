@@ -51,8 +51,8 @@ function edit(req, res) {
 
 
 function update(req, res) {
-    Todo.findByIdAndUpdate(req.params.id, req.body, function(err, t0d0) {
+    Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
         console.log(err, todo)
-        res.redirect(`/todos/${todo._id}`);
+        res.redirect(`/todos`);
     });
 }
