@@ -4,13 +4,16 @@
 <form action="/todos" method="post">
     <label for="title">Add Task</label>
     <input type="text" name="title" id="">
+    <label for="description">Description</label>
+    <input type="text" name="description">
     <button type="submit">Enter Task</button>
 </form>
 </section>
 <section>
 <ul>
 <% todos.forEach(todo => { %>
-    <li><%= todo.title %></li> <a href="/todos">
+    <li>Title: <%= todo.title %></li> 
+    <li> Description: <%= todo.description %></li> 
     <a href="/todos/<%= todo._id %>">Details</a>
 <% }) %>
 </ul>

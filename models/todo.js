@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-
+const prioritySchema = new mongoose.Schema({
+    tag: {
+        type: String,
+        enum: ['Priorty', 'In progress', 'Done']
+    }
+})
 
 
 const todoSchema = new mongoose.Schema({

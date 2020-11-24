@@ -40,7 +40,6 @@ function deleteTodo(req, res) {
     });
 }
 
-
 function edit(req, res) {
     Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
         res.render('todos/edit', {
@@ -49,10 +48,8 @@ function edit(req, res) {
     })
 }
 
-
 function update(req, res) {
     Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
-        console.log(err, todo)
         res.redirect(`/todos`);
     });
 }
