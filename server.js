@@ -17,6 +17,7 @@ const indexRouter = require('./routes/index');
 const todosRouter = require('./routes/todos');
 const usersRouter = require('./routes/users');
 
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(morgan('dev'));
@@ -39,6 +40,7 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);
 app.use('/', usersRouter);
+
 
 app.listen(port, function() {
     console.log(`Express listening on ${port}`)

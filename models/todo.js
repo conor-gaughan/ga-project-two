@@ -15,12 +15,10 @@ const todoSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-    checklist: {
-        type: String,
-    },
     date: {
         type: Date,
-    }
+    },
+    tags: [ prioritySchema ],
 }, { timestamps: true })
 
 

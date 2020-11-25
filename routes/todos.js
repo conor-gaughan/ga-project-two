@@ -12,6 +12,8 @@ router.delete('/:id', todosCtrl.delete);
 router.get('/:id/edit', todosCtrl.edit);
 router.put('/:id', todosCtrl.update)
 
+router.post('/:id', todosCtrl.addPriority);
+
 
 
 module.exports = router;

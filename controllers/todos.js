@@ -2,6 +2,7 @@ const Todo = require('../models/todo')
 
 module.exports = {
     index,
+    addPriority,
     create,
     show,
     delete: deleteTodo,
@@ -16,6 +17,13 @@ function index(req, res) {
             todos,
             user: req.user,
         })
+    })
+}
+
+function addPriority(req, res) {
+    req.tags.push(req.body);
+    req.save(function(err) {
+        res.redirect('todos/show')
     })
 }
 

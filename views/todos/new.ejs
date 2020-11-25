@@ -1,35 +1,41 @@
 <%- include('../partials/header') %>
 
-<section>
-<form action="/todos" method="post">
-    <label for="title">Add Task</label>
-    <input type="text" name="title" id="">
-    <label for="description">Description</label>
-    <input type="text" name="description">
-    <button type="submit">Enter Task</button>
-</form>
-</section>
-<section>
-<ul>
-<% todos.forEach(todo => { %>
-    <li>Title: <%= todo.title %></li> 
-    <li> Description: <%= todo.description %></li> 
-    <a href="/todos/<%= todo._id %>">Details</a>
-<% }) %>
-</ul>
 
-<ul>
-    <% todos.forEach(function(todo) { %>
-        <li>
-            <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-            </form>
-            <a href="/todos/<%= todo._id %>"></a>
 
-        </li>
-    <% }) %>
-</ul>
-
-</section>
-<a href="/">back home</a>
+    <section>
+        <form action="/todos" method="post">
+            <label for="title">Add Task</label>
+            <input type="text" name="title" id="">
+            <label for="description">Description</label>
+            <input type="text" name="description">
+            <label for="date">Deadline</label>
+            <input type="datetime-local" name="date" id="">
+            <button type="submit">Enter Task</button>
+        </form>
+        </section>
+        <section>
+        <ul>
+        <% todos.forEach(todo => { %>
+            <li>Title: <%= todo.title %></li> 
+            <li> Description: <%= todo.description %></li> 
+            <a href="/todos/<%= todo._id %>">Details</a>
+        <% }) %>
+        </ul>
+        
+        <ul>
+            <% todos.forEach(function(todo) { %>
+                <li>
+                    <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+                        <button type="submit">X</button>
+                    </form>
+                    <a href="/todos/<%= todo._id %>"></a>
+        
+                </li>
+            <% }) %>
+        </ul>
+        
+        </section>
+        <a href="/">back home</a>
+        
+    
 

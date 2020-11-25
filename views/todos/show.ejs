@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 </head>
+
 <body>
     <h2>Details</h2>
     <ul>
         <li><%=todo.title%></li>
+        <a href="/todos/<%= todo._id %>/edit"><button>Edit</button></a>
+
     </ul>
+    <h3>Select Priority</h3>
+
+
+    <label for="priority">Priority</label>
+    <form action="/todos/<%= todo._id %>" method="POST">
+    <select name="priority" id="cars">
+        <option value="Priority">Priority</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>    
+    </select>
+    <button type="submit">Submit</button>
+    </form>
+
 </body>
-<a href="/todos/<%= todo._id %>/edit"><button>Edit</button></a>
 <a href="/todos">Back to todos</a>
 <a href="/">Back home</a>
+
 </html>
