@@ -28,6 +28,10 @@
     <button type="submit">Submit</button>
     </form>
 
+    <% todo.tags.forEach(function(element) { %>
+        <h3><%= element.tag %></h3>
+    <% }) %>
+
 </body>
 <a href="/todos">Back to todos</a>
 <a href="/">Back home</a>
