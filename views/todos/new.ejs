@@ -1,8 +1,41 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-
-
-    <section>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Forget Me Note</h1>
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="/todos">Forget Me Note</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+                <% if (user) { %>
+                    <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                <% } else { %>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                <% } %>
+                </li>
+        </ul>
+    </header>
+    <h1 class="forget-header">Forget Me Note</h1>
+    <section class="form-container">
         <form action="/todos" method="post">
             <label for="title">Add Task</label>
             <input type="text" name="title" id="">
@@ -13,16 +46,25 @@
             <button type="submit">Enter Task</button>
         </form>
         </section>
-        <section>
+        <section class="todo-items">
         <ul>
         <% todos.forEach(todo => { %>
             <li>Title: <%= todo.title %></li> 
             <li> Description: <%= todo.description %></li> 
+            <li>Deadline: <%= todo.date %></li>
+            
             <a href="/todos/<%= todo._id %>">Details</a>
+            <li>
+                <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+                    <button class="delete" type="submit">Delete  <i class="fas fa-minus-circle fa-sm"></i></button>
+                </form>
+                <a href="/todos/<%= todo._id %>"></a>
+    
+            </li>
         <% }) %>
         </ul>
         
-        <ul>
+        <!-- <ul class="delete">
             <% todos.forEach(function(todo) { %>
                 <li>
                     <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
@@ -32,10 +74,17 @@
         
                 </li>
             <% }) %>
-        </ul>
+        </ul> -->
         
         </section>
         <a href="/">back home</a>
+    
+</body>
+</html>
+
+
+
+    
         
     
 
