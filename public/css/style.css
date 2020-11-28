@@ -184,7 +184,7 @@ form {
 .todo-items ul {
     display: block;
     text-align: center;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 
@@ -198,6 +198,14 @@ li .delete {
     border: none;
     /* text-align: center; */
     
+}
+
+table {
+    text-align: center;
+    width: 70%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

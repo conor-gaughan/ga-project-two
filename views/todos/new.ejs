@@ -49,18 +49,37 @@
         <section class="todo-items">
         <ul>
         <% todos.forEach(todo => { %>
-            <li>Title: <%= todo.title %></li> 
-            <li> Description: <%= todo.description %></li> 
-            <li>Deadline: <%= todo.date %></li>
+            <table class="centered responsive-table striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Deadline</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= todo.title %></td>
+                        <td><%= todo.description %></td>
+                        <td><%= todo.date %></td>
+                        <td><a href="/todos/<%= todo._id %>">Details</a></td>
+                        <td><form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+                            <button class="delete" type="submit">Delete  <i class="fas fa-minus-circle fa-sm"></i></button>
+                        </form>
+                        <a href="/todos/<%= todo._id %>"></a></td>
+                    </tr>
+                </tbody>
+            </table>
             
-            <a href="/todos/<%= todo._id %>">Details</a>
-            <li>
+            
+            <!-- <li>
                 <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
                     <button class="delete" type="submit">Delete  <i class="fas fa-minus-circle fa-sm"></i></button>
                 </form>
                 <a href="/todos/<%= todo._id %>"></a>
     
-            </li>
+            </li> -->
         <% }) %>
         </ul>
         
