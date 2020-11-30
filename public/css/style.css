@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 }
 
-ul {
+header ul {
     display: flex;
     list-style: none;
     margin: 0;
@@ -132,6 +132,10 @@ header {
 
 .features-copy i {
     color: green;
+}
+
+.features-list li {
+    display: block;
 }
 
 
