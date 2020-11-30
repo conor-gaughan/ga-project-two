@@ -3,17 +3,18 @@ const router = express.Router();
 
 const todosCtrl = require('../controllers/todos')
 
-// router.get('/', isLoggedIn, todosCtrl.index)
-
-router.get('/', todosCtrl.index);
-router.post('/', todosCtrl.create);
-router.get('/:id', todosCtrl.show);
-router.delete('/:id', todosCtrl.delete);
-router.get('/:id/edit', todosCtrl.edit);
-router.put('/:id', todosCtrl.update)
+router.get('/', isLoggedIn, todosCtrl.index);
+router.post('/', isLoggedIn, todosCtrl.create);
+router.get('/:id', isLoggedIn, todosCtrl.show);
+router.delete('/:id', isLoggedIn, todosCtrl.delete);
+router.get('/:id/edit', isLoggedIn, todosCtrl.edit);
+router.put('/:id', isLoggedIn, todosCtrl.update)
 
 router.post('/:id', todosCtrl.addPriority);
 
-
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) return next();
+    res.redirect('/auth/google')
+}
 
 module.exports = router;

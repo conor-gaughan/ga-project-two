@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
                 email: profile.emails[0].value,
                 googleId: profile.id,
             });
-
+ 
             newUser.save(function(err, user) {
                 if(err) return cb(err);
                 return cb(null, user)
