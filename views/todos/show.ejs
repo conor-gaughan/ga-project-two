@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css" />
     
     <title>Document</title>
 </head>
 
 <body>
+    <section class="details-container">
     <h2>Details</h2>
-    <ul>
+    <ul class="details-list">
         <li><%=todo.title%></li>
-        <a href="/todos/<%= todo._id %>/edit"><button>Edit</button></a>
-
+        <li><a href="/todos/<%= todo._id %>/edit"><button>Edit</button></a></li>
     </ul>
+
     <h3>Select Priority</h3>
 
 
@@ -31,6 +39,7 @@
     <% todo.tags.forEach(function(element) { %>
         <h3><%= element.tag %></h3>
     <% }) %>
+</section>
 
 </body>
 <a href="/todos">Back to todos</a>

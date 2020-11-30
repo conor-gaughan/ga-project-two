@@ -236,9 +236,20 @@ table {
     margin-right: auto;
 }
 
+/* ! DETAILS CONTAINER */
 
+.details-container {
+    /* margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
 
-
+.details-list {
+    list-style: none;
+    display: flex;
+}
 
 
 /* ! Footer */
