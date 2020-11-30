@@ -17,9 +17,14 @@ const todoSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
+        // function () {
+        //     return new Date().getDate();
+        // }
     },
-    tags: [ prioritySchema ],
-}, { timestamps: true })
+    tags: [prioritySchema],
+}, {
+    timestamps: true
+})
 
 
 module.exports = mongoose.model('Todo', todoSchema)
