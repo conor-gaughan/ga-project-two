@@ -66,11 +66,11 @@ header {
 .title {
     text-align: center;
     margin-top: 40px;
-    font-size: 2rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;;
 }
 .pencil-icon {
-    height: 40px;
+    height: 60px;
     transform: rotate(290deg);
 }
 
@@ -93,7 +93,7 @@ header {
 
 .jazzy-lingo {
     display: block;
-    font-size: 1.5em;  
+    font-size: 2rem;  
     width: 40%;
 }
 
@@ -126,8 +126,8 @@ header {
 .features-copy {
     /* border: 2px solid red; */
     padding-right: 80px;
-    font-size: 1.5em;  
-    width: 80%;
+    font-size: 2rem;  
+    width: 90%;
 }
 
 .features-copy i {
@@ -138,7 +138,7 @@ header {
 
 .features-img {
     margin-top: 60px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .features-img img {
