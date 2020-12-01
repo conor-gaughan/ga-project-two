@@ -51,8 +51,8 @@
         </form>
     </section>
     <section class="todo-items">
-        <ul>
-            <% todos.forEach(todo => { %>
+        
+            
             <table class="centered responsive-table striped">
                 <thead>
                     <tr>
@@ -63,6 +63,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% todos.forEach(todo => { %>
                     <tr>
                         <td><%= todo.title %></td>
                         <td><%= todo.description %></td>
@@ -77,32 +78,9 @@
                             <a href="/todos/<%= todo._id %>"></a>
                         </td>
                     </tr>
+                    <% }) %>
                 </tbody>
             </table>
-
-
-            <!-- <li>
-                <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
-                    <button class="delete" type="submit">Delete  <i class="fas fa-minus-circle fa-sm"></i></button>
-                </form>
-                <a href="/todos/<%= todo._id %>"></a>
-    
-            </li> -->
-            <% }) %>
-        </ul>
-
-        <!-- <ul class="delete">
-            <% todos.forEach(function(todo) { %>
-                <li>
-                    <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
-                        <button type="submit">X</button>
-                    </form>
-                    <a href="/todos/<%= todo._id %>"></a>
-        
-                </li>
-            <% }) %>
-        </ul> -->
-
     </section>
 
 </body>
