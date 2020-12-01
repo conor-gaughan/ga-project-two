@@ -62,6 +62,7 @@ function edit(req, res) {
     Todo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
         res.render('todos/edit', {
             todo,
+            user: req.user
         })
     })
 }

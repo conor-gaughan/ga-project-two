@@ -239,17 +239,103 @@ table {
 /* ! DETAILS CONTAINER */
 
 .details-container {
-    /* margin-top: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; */
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
 }
+
 
 .details-list {
     list-style: none;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    padding: 0px;
 }
+
+.show-button {
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 89, 94);
+}
+
+.label-form button{
+    background-color: #3A86FF;
+}
+
+.details-container img {
+    height: 20px;
+}
+
+
+.priority {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.label-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.label-form select {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.edit-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.edit-form input {
+    padding: 10px;
+    /* margin-top: 40px; */
+    text-align: center;
+}
+
+.edit-form button {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 89, 94);
+}
+
+.link {
+   margin-top: 100px;
+   text-decoration: underline;
+}
+
 
 
 /* ! Footer */

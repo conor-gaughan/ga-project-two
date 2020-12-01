@@ -24,7 +24,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
-// TODO Add session middleware here
 
 app.use(session({
   secret: process.env.SESSION_SECRET,

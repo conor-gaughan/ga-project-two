@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Edit Todo</title>
 </head>
+
 <body>
-    <h1>Edit: "<%= todo.title%>"</h1>
-    <form action="/todos/<%= todo._id %>?_method=PUT" method="POST">
-        <label for="title">Title</label>
-        <input type="text" name="title" value="<%= todo.title %>">
-        <button type="submit">Save Changes</button>
-    </form>
+
+    <header>
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/todos">To Do's</a></li>
+            <li>
+                <% if (user) { %>
+                <a href="/logout">Log Out</a>
+                <% } else { %>
+                <a href="/auth/google"><i class="material-icons left">account_circle</i>Login with Google</a>
+                <% } %>
+            </li>
+        </ul>
+    </header>
+
+    <section class="edit">
+        <h1>Edit: "<%= todo.title%>"</h1>
+        <form class="edit-form" action="/todos/<%= todo._id %>?_method=PUT" method="POST">
+            <input type="text" name="title" value="<%= todo.title %>">
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
     
-    <a href="/todos">Todos</a>
 </body>
+
 </html>
