@@ -1,4 +1,4 @@
-<h1 align="center">Todo App!</h1>
+<h1 align="center">Forget Me Note!</h1>
 
 <div align="center"><img src="https://i.imgur.com/CSqin9r.jpeg" /></div>
 

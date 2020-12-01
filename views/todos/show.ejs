@@ -47,7 +47,7 @@
         </form>
 
         <% todo.tags.forEach(function(element) { %>
-        <h3>Label: <%= element.tag %></h3>
+        <button><%= element.tag %></button>
         <% }) %>
         <a class='link' href="/todos">Add a new to-do!</a>
     </section>

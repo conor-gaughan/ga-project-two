@@ -20,12 +20,6 @@ function index(req, res) {
     })
 }
 
-// function addPriority(req, res) {
-//     req.todos.tags.push(req.body);
-//     req.user.save(function(err) {
-//         res.redirect('todos/show')
-//     })
-// }
 
 function addPriority(req, res) {
     Todo.findById(req.params.id, function(err, todo) {
