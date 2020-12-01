@@ -1,6 +1,6 @@
-<h1 style="text-align: center">Todo App!</h1>
+<h1 align="center">Todo App!</h1>
 
-<div style="text-align:center"><img src="https://i.imgur.com/CSqin9r.jpeg" /></div>
+<div align="center"><img src="https://i.imgur.com/CSqin9r.jpeg" /></div>
 
 The purpose of this app is to provide a legitimate company product experience. There's a home page with features, and the app itself.
 
