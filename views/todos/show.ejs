@@ -28,6 +28,8 @@
         <!-- <h2>Edit Title</h2> -->
         <ul class="details-list">
             <li>Title: <%=todo.title%></li>
+            <li>Description: <%=todo.description%></li>
+            <li>Date: <%=todo.date%></li>
             <li><a href="/todos/<%= todo._id %>/edit"><button class="show-button">Edit  <img src="https://www.flaticon.com/svg/static/icons/svg/3094/3094179.svg"></button></a></li>
         </ul>
     </section>
@@ -36,7 +38,6 @@
         <p>Select Label</p>
 
 
-        <!-- <label for="priority">Label</label> -->
         <form class="label-form" action="/todos/<%= todo._id %>" method="POST">
             <select name="tag" id="cars">
                 <option value="Priority">Priority</option>

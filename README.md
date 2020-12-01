@@ -17,7 +17,7 @@ The functionality purpose of this app is to demonstrate CRUD.
 - Node
 - MongoDB
 - Express
-- Passport for Google Authenticator
+- Passport for Google OAuth
 
 ### Getting Started
 
