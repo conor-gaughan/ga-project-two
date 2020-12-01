@@ -44,11 +44,11 @@
                 <option value="In Progress">In Progress</option>
                 <option value="Done">Done</option>
             </select>
-            <button type="submit" class="show-button">Add Tag</button>
+            <button type="submit" class="show-button">Add Label</button>
         </form>
 
         <% todo.tags.forEach(function(element) { %>
-        <button><%= element.tag %></button>
+        <button class="label-button"><%= element.tag %></button>
         <% }) %>
         <a class='link' href="/todos">Add a new to-do!</a>
     </section>

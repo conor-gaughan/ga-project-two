@@ -17,9 +17,6 @@ const todoSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
-        // function () {
-        //     return new Date().getDate();
-        // }
     },
     tags: [prioritySchema],
 }, {

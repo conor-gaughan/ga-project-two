@@ -11,8 +11,7 @@ The functionality purpose of this app is to demonstrate CRUD.
 - HTML5
 - CSS3
   - Font Awesome Icons
-  - Materialze
-  - Flaticons
+  - Materialize
 - JavaScript
 - Node
 - MongoDB
@@ -23,9 +22,13 @@ The functionality purpose of this app is to demonstrate CRUD.
 
 [Deployed Website](https://forget-me-note.herokuapp.com/)
 
+#### Sections
+
 - Homepage
 - Features (on homepage)
 - To do app
+  - Details page (to add label)
+  - Edit page
 
 ### Wireframe
 
@@ -65,6 +68,7 @@ The functionality purpose of this app is to demonstrate CRUD.
 - Dark Mode
 - CSS Variables
 - Mobile friendly
-- Add Priority to main to do page
-- CSS Transitions
+- Add labels to main to do table
+  - Be able to filter by label
+- Fix date format
 - Additional embedded or referenced schemas
